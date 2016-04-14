@@ -15,6 +15,6 @@ class Stage extends Model
     }
 
     public function preferredTechnicians() {
-        return $this->hasMany('App\Technician');
+        return $this->belongsToMany('App\Technician');
     }
 }
