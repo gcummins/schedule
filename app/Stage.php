@@ -7,14 +7,14 @@ use Illuminate\Database\Eloquent\Model;
 class Stage extends Model
 {
     public function order() {
-        $this->hasOne('App\Order');
+        return $this->belongsTo('App\Order');
     }
 
     public function bay() {
-        $this->hasOne('App\Bay');
+        return $this->belongsTo('App\Bay');
     }
 
     public function preferredTechnicians() {
-        $this->hasMany('App\Technician');
+        return $this->hasMany('App\Technician');
     }
 }

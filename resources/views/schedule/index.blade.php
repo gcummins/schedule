@@ -22,7 +22,8 @@
             @foreach($stages as $stage)
                 <tr>
                     <td>
-                        {{ $stage->order->id }}<br>
+                        {{ $stage->order->id }}
+                        <br>
                         {{ $stage->number }}
                     </td>
                     <td>
@@ -35,7 +36,7 @@
                         Work Description
                     </td>
                     <td>
-                        Bay
+                        {{ $stage->bay->name }}
                     </td>
                     <td>
                         Technician
