@@ -14,3 +14,8 @@
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('/schedule', ['as' => 'schedule.index', 'uses' => 'ScheduleController@index']);
+
+Route::get('/bay/create', ['as' => 'bay.create', 'uses' => 'BayController@create']);
+Route::post('/bay/create', ['as' => 'bay.store', 'uses' => 'BayController@store']);
