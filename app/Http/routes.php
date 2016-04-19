@@ -17,5 +17,6 @@ Route::get('/', function () {
 
 Route::get('/schedule', ['as' => 'schedule.index', 'uses' => 'ScheduleController@index']);
 
+Route::get('/order/{id}', ['as' => 'order.show', 'uses' => 'OrderController@show']);
 Route::get('/bay/create', ['as' => 'bay.create', 'uses' => 'BayController@create']);
 Route::post('/bay/create', ['as' => 'bay.store', 'uses' => 'BayController@store']);
